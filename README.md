@@ -1,2 +1,2 @@
 # garygregory-parent
-Parent Maven Project 
+The GG Parent POM provides common settings for all GG projects.
