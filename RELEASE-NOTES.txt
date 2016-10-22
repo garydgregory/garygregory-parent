@@ -1,5 +1,6 @@
-Gary Gregory Parent 41
+Gary Gregory Parent 1.0.0
 RELEASE NOTES
 
+The GG Parent POM provides common settings for all GG projects.
 
-http://...
+https://github.com/garydgregory/garygregory-parent
