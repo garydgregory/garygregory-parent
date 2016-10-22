@@ -34,7 +34,8 @@
      ! as part of the template processing.
      ! See MSITE-559
      -->
-    <src>http://dummy.invalid/$relativePath/images/logo.png</src>
+    <!-- <src>http://dummy.invalid/$relativePath/images/logo.png</src> -->
+    <src>images/logo.png</src>
     <alt>Gary Gregory logo</alt>
     <!--
      ! Similarly href entries are converted before they are passed to the template.
