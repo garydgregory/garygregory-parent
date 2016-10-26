@@ -41,6 +41,7 @@
     <gg.ReleaseVersion>1.0.0</gg.ReleaseVersion>
     <gg.ReleaseManager>Gary Gregory</gg.ReleaseManager>
     <gg.Copyright>Copyright &#169; ${project.inceptionYear}-{currentYear} {organizationName}. All Rights Reserved.</gg.Copyright>
+    <gg.GitHubUser>garydgregory</gg.GitHubUser>
   </properties>
 
   <scm>
