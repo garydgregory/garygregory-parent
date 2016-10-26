@@ -58,16 +58,29 @@
   </skin>
 
   <body>
+    <links>
+      <item name="Books" href="https://www.amazon.com/author/garygregory/" /> 
+      <item name="LinkedIn" href="https://www.linkedin.com/in/garydgregory/" /> 
+      <item name="Blog" href="https://garygregory.wordpress.com" />
+      <item name="Apache" href="https://people.apache.org/~ggregory/" />
+      <item name="GitHub" href="https://github.com/garydgregory" />
+    </links>
     <menu ref="reports" inherit="bottom" />
   </body>
 
   <!-- inherited -->
   <poweredBy>
+    <logo name="Maven" href="http://maven.apache.org/" img="http://maven.apache.org/images/logos/build-by-maven-white.png" />
   </poweredBy>
 
   <!-- inherited -->
   <custom>
     <!-- @project.name@ will be replaced by the template; if we used ${project.name} it would pick up Commons Parent -->
+    <fluidoSkin>
+      <twitter>
+        <user>GaryGregory</user>
+      </twitter>
+    </fluidoSkin>
     <footer>
       <div class="center">
       </div>
