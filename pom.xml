@@ -257,6 +257,10 @@
         <artifactId>apache-rat-plugin</artifactId>
         <configuration>
           <consoleOutput>true</consoleOutput>
+          <excludes>
+            <!-- GitHub Pages site -->
+            <exclude>docs/**</exclude>
+          </excludes>
         </configuration>
         <executions>
           <execution>
