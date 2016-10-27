@@ -38,17 +38,19 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
 
-    <gg.ReleaseVersion>1.0.0</gg.ReleaseVersion>
-    <gg.ReleaseManager>Gary Gregory</gg.ReleaseManager>
-    <gg.Copyright>Copyright &#169; ${project.inceptionYear}-{currentYear} {organizationName}. All Rights Reserved.</gg.Copyright>
-    <gg.GitHubUser>garydgregory</gg.GitHubUser>
+    <gg-ReleaseVersion>1.0.0</gg-ReleaseVersion>
+    <gg-ReleaseManager>Gary Gregory</gg-ReleaseManager>
+    <gg-Copyright>Copyright &#169; ${project.inceptionYear}-{currentYear} {organizationName}. All Rights Reserved.</gg-Copyright>
+    <gg-GitHubUser>garydgregory</gg-GitHubUser>
+    <gg-LicenseName>The Apache Software License, Version 2.0</gg-LicenseName>
+    <gg-LicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</gg-LicenseUrl>
   </properties>
 
   <scm>
     <connection>scm:git:${project.url}</connection>
     <developerConnection>scm:git:${project.url}.git</developerConnection>
     <url>${project.url}</url>
-    <tag>${project.artifactId}-${gg.ReleaseVersion}</tag>
+    <tag>${project.artifactId}-${gg-ReleaseVersion}</tag>
   </scm>
 
   <developers>
@@ -66,8 +68,8 @@
 
   <licenses>
     <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <name>${gg-LicenseName}</name>
+      <url>${gg-LicenseUrl}</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -152,7 +154,7 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.10.4</version>
           <configuration>
-            <bottom><![CDATA[<p align="center">${gg.Copyright}</p>]]></bottom>
+            <bottom><![CDATA[<p align="center">${gg-Copyright}</p><p align="center">Use is subject to <a href="${gg-LicenseUrl}">${gg-LicenseName}</a></p>]]></bottom>
           </configuration>
         </plugin>
         <plugin>
