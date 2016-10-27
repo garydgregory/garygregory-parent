@@ -260,6 +260,8 @@
           <excludes>
             <!-- GitHub Pages site -->
             <exclude>docs/**</exclude>
+            <!-- Javadoc -->
+            <exclude>**/package-info.java</exclude>
           </excludes>
         </configuration>
         <executions>
