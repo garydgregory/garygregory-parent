@@ -160,7 +160,9 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.10.4</version>
           <configuration>
+            <keywords>true</keywords>  
             <overview>src/main/java/overview.html</overview>
+            <linksource>true</linksource>
             <bottom><![CDATA[<p align="center">${gg-Copyright}<br />Use is subject to <a href="${gg-LicenseUrl}">${gg-LicenseName}</a></p>]]></bottom>
           </configuration>
         </plugin>
