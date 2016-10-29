@@ -44,6 +44,11 @@
     <gg-GitHubUser>garydgregory</gg-GitHubUser>
     <gg-LicenseName>The Apache Software License, Version 2.0</gg-LicenseName>
     <gg-LicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</gg-LicenseUrl>
+    <gg-AmazonrUrl>https://www.amazon.com/author/garygregory/</gg-AmazonrUrl>
+    <gg-LinkedInUrl>https://www.linkedin.com/in/garydgregory/</gg-LinkedInUrl>
+    <gg-BlogUrl>https://garygregory.wordpress.com</gg-BlogUrl>
+    <gg-GitHubUrl>https://github.com/garydgregory</gg-GitHubUrl>
+    <gg-ApacheUrl>https://people.apache.org/~ggregory/</gg-ApacheUrl>
   </properties>
 
   <scm>
@@ -160,7 +165,7 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.10.4</version>
           <configuration>
-            <keywords>true</keywords>  
+            <keywords>true</keywords>
             <overview>src/main/java/overview.html</overview>
             <linksource>true</linksource>
             <header><![CDATA[<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>]]></header>
@@ -204,6 +209,13 @@
               </goals>
             </execution>
           </executions>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.doxia</groupId>
+              <artifactId>doxia-module-markdown</artifactId>
+              <version>1.7</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
