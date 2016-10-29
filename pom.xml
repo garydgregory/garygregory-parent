@@ -163,6 +163,7 @@
             <keywords>true</keywords>  
             <overview>src/main/java/overview.html</overview>
             <linksource>true</linksource>
+            <header><![CDATA[<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>]]></header>
             <bottom><![CDATA[<p align="center">${gg-Copyright}<br />Use is subject to <a href="${gg-LicenseUrl}">${gg-LicenseName}</a></p>]]></bottom>
           </configuration>
         </plugin>
