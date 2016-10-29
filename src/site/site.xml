@@ -27,7 +27,7 @@
     <!--
      ! Even though the default site.vm template contains code to convert relative links, this is
      ! actually done before the content is passed to the template, for both site:site and site:stage.
-     ! Unfortunately, this means that the conversion is done in the context of commons-parent, which
+     ! Unfortunately, this means that the conversion is done in the context of garygregory-parent, which
      ! contains the site.xml, rather than in the context of the project being built.
      ! This means that relative URLs are created with an additional ../ prefix.
      ! The work-round is to use a dummy absolute URL that can never be used, and then remove this
