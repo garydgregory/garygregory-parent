@@ -16,6 +16,5 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-![garygregory-parent](https://github.com/garydgregory/garygregory-parent/raw/master/src/site/resources/images/logo.png "garygregory-parent")
 # garygregory-parent
 The GG Parent POM provides common settings for all GG projects.
