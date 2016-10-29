@@ -66,7 +66,7 @@
       <item name="Apache" href="https://people.apache.org/~ggregory/" />
       <item name="GitHub" href="https://github.com/garydgregory" />
     </links>
-    <menu name="User guide">
+    <menu name="User Guide">
       <item href="README.html" name="Read Me" />
     </menu>
     <menu ref="reports" inherit="bottom" />
