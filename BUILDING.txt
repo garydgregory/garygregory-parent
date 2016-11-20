@@ -57,6 +57,7 @@ mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=false
 
 Deleting a tag
 ==============
+
 git tag -d 1.0.0
 git push origin :refs/tags/1.0.0
 
