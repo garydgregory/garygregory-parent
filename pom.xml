@@ -23,7 +23,7 @@
 
   <groupId>com.garygregory</groupId>
   <artifactId>garygregory-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>garygregory-parent</name>
@@ -482,19 +482,6 @@
             <configuration>
               <source>${maven.compiler.source}</source>
             </configuration>
-          </plugin>
-          <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <inherited>true</inherited>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>single</goal>
-                </goals>
-                <!-- COMMONSSITE-87 Ensure this runs after all package phase plugins -->
-                <phase>verify</phase>
-              </execution>
-            </executions>
           </plugin>
         </plugins>
       </build>
