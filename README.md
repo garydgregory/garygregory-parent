@@ -21,4 +21,5 @@
 The GG Parent POM provides common settings for all GG projects.
 
 [![Build Status](https://travis-ci.org/garydgregory/garygregory-parent.svg?branch=master)](https://travis-ci.org/garydgregory/garygregory-parent)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/garygregory-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/garygregory-parent)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
