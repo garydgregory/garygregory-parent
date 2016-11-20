@@ -1,1 +1,56 @@
-TODO
+<!--
+    Copyright (C) 2016 Gary Gregory. All rights reserved.
+
+    See the NOTICE.txt file distributed with this work for additional
+    information regarding copyright ownership.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+Basic Build Checks
+==================
+
+mvn apache-rat:check
+
+mvn verify
+
+Deploy SNAPSHOT locally
+=======================
+
+mvn install
+
+Deploy SNAPSHOT to Maven Central
+================================
+
+mvn deploy
+
+Releasing
+=========
+
+All of the above to check that all is well.
+
+Get a fresh clone:
+
+set REL_VERSION=1.0
+set REL_PROJECT=garygregory-parent
+del /S/Q %TEMP%\RC\*
+mkdir %TEMP%\RC
+%SystemDrive%
+cd %TEMP%\RC
+git clone https://github.com/garydgregory/%REL_PROJECT% .
+mvn versions:set -DnewVersion=%REL_VERSION% -DgenerateBackupPoms=false
+git commit -am "Update version numbers for release garygregory-parent 1.0"
+git tag -s garygregory-parent-1.0 -m "Tag release garygregory-parent 1.0"
+git push origin garygregory-parent-1.0
+mvn deploy
+mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=false
