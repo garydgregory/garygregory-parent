@@ -23,7 +23,7 @@
 
   <groupId>com.garygregory</groupId>
   <artifactId>garygregory-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>garygregory-parent</name>
@@ -38,7 +38,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
 
-    <gg-ReleaseVersion>1.0.0</gg-ReleaseVersion>
+    <gg-ReleaseVersion>1.1.0</gg-ReleaseVersion>
     <gg-ReleaseManager>Gary Gregory</gg-ReleaseManager>
     <gg-Copyright>Copyright &#169; ${project.inceptionYear}-{currentYear} {organizationName}. All Rights Reserved.</gg-Copyright>
     <gg-GitHubUser>garydgregory</gg-GitHubUser>
@@ -62,7 +62,7 @@
     <developer>
       <id>garygregory</id>
       <name>Gary Gregory</name>
-      <email>gary@garygregory.com</email>
+      <email>garydgregory@gmail.com</email>
       <organization>Gary Gregory</organization>
       <roles>
         <role>Founder</role>
@@ -311,6 +311,11 @@
           <artifactId>jdepend-maven-plugin</artifactId>
           <version>2.0</version>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-changes-plugin</artifactId>
+          <version>2.12.1</version>
+        </plugin>        
       </plugins>
     </pluginManagement>
 
@@ -371,16 +376,24 @@
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
         <artifactId>javancss-maven-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <version>2.12.1</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>changes-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>            
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
