@@ -54,9 +54,14 @@ mvn changes:announcement-generate
 
 mvn versions:set -DnewVersion=1.1.0 -DgenerateBackupPoms=false
 git commit -am "Update version numbers for release garygregory-parent 1.1.0"
+mvn deploy -Prelease
+
+Sign on to Nexus at https://oss.sonatype.org and "close" the repository
+Validate RC
+Sign on to Nexus and "release" the repository
+
 git tag -s 1.1.0 -m "Tag release garygregory-parent 1.1.0" -u "ggregory@apache.org"
 git push origin 1.1.0
-mvn deploy -Prelease
 mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=false
 
 Deleting a tag
