@@ -1,6 +1,23 @@
-Gary Gregory Parent 1.0.0
+Gary Gregory Parent 1.1.0
 RELEASE NOTES
+
+The garygregory-parent team is pleased to announce the garygregory-parent-1.1.0-SNAPSHOT release!
 
 The GG Parent POM provides common settings for all GG projects.
 
-https://github.com/garydgregory/garygregory-parent
+Changes in this version include:
+
+New features:
+o Add maven-changes-plugin and report. 
+
+Fixed Bugs:
+o Add versions-maven-plugin 2.3 to fix an NPE in the default 2.2 that Maven 3.3.9 uses. 
+
+Removed:
+o Remove cobertura-maven-plugin from reporting section. 
+
+Have fun!
+-garygregory-parent team
+-https://github.com/garydgregory/garygregory-parent
+
+
