@@ -49,7 +49,7 @@ mkdir %TEMP%\RC
 cd %TEMP%\RC
 git clone https://github.com/garydgregory/%REL_PROJECT% .
 mvn versions:set -DnewVersion=%REL_VERSION% -DgenerateBackupPoms=false
-git commit -am "Update version numbers for release garygregory-parent 1.0"
+git commit -am "Update version numbers for release garygregory-parent 1.0.0"
 git tag -s 1.0.0 -m "Tag release garygregory-parent 1.0.0" -u "ggregory@apache.org"
 git push origin 1.0.0
 mvn deploy -Prelease
