@@ -48,6 +48,10 @@ mkdir %TEMP%\RC
 %SystemDrive%
 cd %TEMP%\RC
 git clone https://github.com/garydgregory/%REL_PROJECT% .
+
+Generate the readme and update RELEASE-NOTES.txt:
+mvn changes:announcement-generate
+
 mvn versions:set -DnewVersion=%REL_VERSION% -DgenerateBackupPoms=false
 git commit -am "Update version numbers for release garygregory-parent 1.0.0"
 git tag -s 1.0.0 -m "Tag release garygregory-parent 1.0.0" -u "ggregory@apache.org"
