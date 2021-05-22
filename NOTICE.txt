@@ -1,2 +1,2 @@
 Gary Gregory Parent POM
-Copyright 2016 Gary Gregory. All rights reserved.
+Copyright 2016-2021 Gary Gregory. All rights reserved.
