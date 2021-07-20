@@ -36,17 +36,19 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
 
-    <gg-ReleaseVersion>1.1.0</gg-ReleaseVersion>
+    <gg-ReleaseVersion>1.2.0</gg-ReleaseVersion>
     <gg-ReleaseManager>Gary Gregory</gg-ReleaseManager>
     <gg-Copyright>Copyright &#169; ${project.inceptionYear}-{currentYear} {organizationName}. All Rights Reserved.</gg-Copyright>
     <gg-GitHubUser>garydgregory</gg-GitHubUser>
     <gg-LicenseName>The Apache Software License, Version 2.0</gg-LicenseName>
-    <gg-LicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</gg-LicenseUrl>
+    <gg-LicenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</gg-LicenseUrl>
     <gg-AmazonrUrl>https://www.amazon.com/author/garygregory/</gg-AmazonrUrl>
     <gg-LinkedInUrl>https://www.linkedin.com/in/garydgregory/</gg-LinkedInUrl>
     <gg-BlogUrl>https://garygregory.wordpress.com</gg-BlogUrl>
     <gg-GitHubUrl>https://github.com/garydgregory</gg-GitHubUrl>
     <gg-ApacheUrl>https://people.apache.org/~ggregory/</gg-ApacheUrl>
+    <!-- Plugin versions -->
+    <gg-maven-javadoc-plugin-version>3.3.0</gg-maven-javadoc-plugin-version>
   </properties>
 
   <scm>
@@ -97,35 +99,22 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.hamcrest</groupId>
-        <artifactId>hamcrest-all</artifactId>
-        <version>1.3</version>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0-M1</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>com.beust</groupId>
         <artifactId>jcommander</artifactId>
-        <version>1.48</version>
+        <version>1.81</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
 
-  <prerequisites>
-    <maven>3.1.1</maven>
-  </prerequisites>
-
   <build>
-    <defaultGoal>clean package site</defaultGoal>
+    <!-- Run Javadoc on test code before the tests because the tests assert what Javadoc generated. -->
+    <defaultGoal>clean javadoc:test-javadoc test package site</defaultGoal>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -214,7 +203,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.19.1</version>
+          <version>3.0.0-M5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -224,12 +213,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${gg-maven-javadoc-plugin-version}</version>
           <configuration>
             <keywords>true</keywords>
             <overview>src/main/java/overview.html</overview>
             <linksource>true</linksource>
-            <header><![CDATA[<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>]]></header>
+            <!-- <header><![CDATA[<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>]]></header> -->
             <bottom><![CDATA[<p align="center">${gg-Copyright}<br />Use is subject to <a href="${gg-LicenseUrl}">${gg-LicenseName}</a></p>]]></bottom>
           </configuration>
         </plugin>
@@ -274,7 +263,7 @@
             <dependency>
               <groupId>org.apache.maven.doxia</groupId>
               <artifactId>doxia-module-markdown</artifactId>
-              <version>1.7</version>
+              <version>1.9.1</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -398,10 +387,6 @@
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
-        <artifactId>javancss-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
       </plugin>
       <plugin>
@@ -447,7 +432,7 @@
 
   <organization>
     <name>Gary Gregory</name>
-    <url>http://garygregory.com/</url>
+    <url>https://garygregory.com/</url>
   </organization>
 
   <profiles>
